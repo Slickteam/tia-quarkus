@@ -24,6 +24,10 @@ dependencies {
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
     testImplementation("io.quarkus:quarkus-test-keycloak-server")
+    testImplementation("com.github.database-rider:rider-cdi:1.32.2") {
+        exclude("stax", "stax-api")
+    }
+    testImplementation("org.assertj:assertj-core:3.23.1")
 }
 
 group = "fr.slickteam"
