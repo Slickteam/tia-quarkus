@@ -1,0 +1,10 @@
+human:
+  - id: 3001
+    name: "Michel"
+    birth: "1958-01-14"
+  - id: 3002
+    name: "Elisabeth"
+    birth: "1947-11-06"
+  - id: 3003
+    name: "Camille"
+    birth: "1998-07-27"

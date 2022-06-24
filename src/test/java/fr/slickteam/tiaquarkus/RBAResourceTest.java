@@ -1,12 +1,23 @@
 package fr.slickteam.tiaquarkus;
 
+import com.github.database.rider.cdi.api.DBRider;
+import com.github.database.rider.core.api.configuration.DBUnit;
+import com.github.database.rider.core.api.dataset.DataSet;
+import fr.slickteam.tiaquarkus.entity.Human;
+import fr.slickteam.tiaquarkus.repository.DogRepository;
+import fr.slickteam.tiaquarkus.repository.HumanRepository;
 import io.quarkus.test.common.http.TestHTTPEndpoint;
 import io.quarkus.test.junit.QuarkusTest;
 import io.quarkus.test.keycloak.client.KeycloakTestClient;
 import io.restassured.RestAssured;
 import org.apache.http.HttpStatus;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
+import org.assertj.core.api.Assertions;
+
+import javax.inject.Inject;
+import java.util.List;
 
 @QuarkusTest
 @TestHTTPEndpoint(RBAResource.class)
@@ -71,6 +82,7 @@ class RBAResourceTest {
                 .then()
                 .statusCode(HttpStatus.SC_FORBIDDEN);
     }
+
 
     private String getAccessToken(String userName) {
         return keycloakClient.getAccessToken(userName);
