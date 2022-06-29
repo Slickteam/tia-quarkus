@@ -1,0 +1,24 @@
+human:
+  - id: 3001
+    name: "Michel"
+    birth: "1958-01-14"
+  - id: 3002
+    name: "Elisabeth"
+    birth: "1947-11-06"
+  - id: 3003
+    name: "Camille"
+    birth: "1998-07-27"
+
+dog:
+  - id: 1001
+    name: "Toutou"
+    birth: "2020-05-12"
+    human_id: 3001
+  - id: 1002
+    name: "Ouaf"
+    birth: "2016-06-14"
+    human_id: 3002
+  - id: 1003
+    name: "Wouf"
+    birth: "2018-01-23"
+    human_id: 3002
